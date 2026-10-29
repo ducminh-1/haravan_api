@@ -1,0 +1,1950 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haravan_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-27 10:14+0000\n"
+"PO-Revision-Date: 2026-04-27 10:14+0000\n"
+"Last-Translator: \n"
+"Language: vi_VN\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_location.py:0
+msgid "%d location(s) fetched."
+msgstr "%d địa điểm được lấy."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_location.py:0
+msgid "%d location(s) mapped automatically."
+msgstr "%d địa điểm được liên kết tự động."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_product.py:0
+msgid "%d product(s) pushed to Haravan."
+msgstr "%d sản phẩm được đẩy lên Haravan."
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__register_webhooks
+msgid "(Re)Register Webhooks"
+msgstr "Đăng ký lại Webhooks"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "<strong>Connected</strong> to Haravan store"
+msgstr "<strong>Đã kết nối</strong> với cửa hàng Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid ""
+"<strong>Connection Error.</strong> Please re-authenticate or check your "
+"credentials."
+msgstr ""
+"<strong>Lỗi kết nối.</strong> Vui lòng xác thực lại hoặc kiểm tra thông tin "
+"đăng nhập của bạn."
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid ""
+"<strong>Not mapped.</strong>\n"
+"                        Select an Odoo stock location to enable inventory sync for this Haravan location."
+msgstr ""
+"<strong>Chưa liên kết.</strong>\n"
+"                        Chọn một vị trí kho Odoo để bật đồng bộ tồn kho cho địa điểm Haravan này."
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "API Credentials"
+msgstr "Thông tin xác thực API"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__access_token
+msgid "Access Token"
+msgstr "Token Truy cập"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__active
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__state__active
+msgid "Active"
+msgstr "Hoạt động"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_active
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_search
+msgid "Active on Haravan"
+msgstr "Hoạt động trên Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_product_template
+msgid "Agriculture Product Template"
+msgstr "Mẫu Sản phẩm Nông nghiệp"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_stock_picking
+msgid "Agriculture Stock Picking"
+msgstr "Phiếu Nhập/Xuất Kho Nông nghiệp"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__location_ids
+msgid "All Haravan ↔ Odoo location mappings for this store"
+msgstr "Tất cả liên kết địa điểm Haravan ↔ Odoo cho cửa hàng này"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__import_order_status__any
+msgid "Any Status"
+msgstr "Bất kỳ Trạng thái nào"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Authenticate"
+msgstr "Xác thực"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Authentication failed: %s"
+msgstr "Xác thực thất bại: %s"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__auto_confirm_orders
+msgid "Auto Confirm Orders"
+msgstr "Tự động Xác nhận Đơn hàng"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_location.py:0
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Auto Map"
+msgstr "Tự động liên kết"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Auto Sync"
+msgstr "Tự động Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__auto_sync_customers
+msgid "Auto Sync Inventory"
+msgstr "Tự động Đồng bộ Tồn kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__auto_sync_revenue
+msgid "Auto Sync Orders"
+msgstr "Tự động Đồng bộ Đơn hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__auto_sync_products
+msgid "Auto Sync Products"
+msgstr "Tự động Đồng bộ Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__auto_confirm_orders
+msgid "Automatically confirm imported Haravan orders"
+msgstr "Tự động xác nhận các đơn hàng Haravan được nhập khẩu"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_inventory__sync_direction__bidirectional
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_location_mapping__sync_direction__bidirectional
+msgid "Bidirectional"
+msgstr "Hai chiều"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_product.py:0
+msgid "Bulk Price Push"
+msgstr "Đẩy Giá Hàng loạt"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_list
+msgid "CRM"
+msgstr "Quản lý Khách hàng"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid ""
+"Call Haravan API: %s\n"
+"Error: %s"
+msgstr ""
+"Gọi API Haravan: %s\n"
+"Lỗi: %s"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__callback_url
+msgid "Callback URL"
+msgstr "URL Gọi lại"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_city
+msgid "City"
+msgstr "Thành phố"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__client_id
+msgid "Client ID"
+msgstr "ID Ứng dụng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__client_secret
+msgid "Client Secret"
+msgstr "Mã Bí mật Ứng dụng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_sync_wizard_form
+msgid "Close"
+msgstr "Đóng"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__import_order_status__closed
+msgid "Closed Only"
+msgstr "Chỉ Đã đóng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__haravan_compare_at_price
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Compare-At Price"
+msgstr "Giá So sánh"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__config_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__config_id
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_config_main
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_search
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__name
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Configuration Name"
+msgstr "Tên Cấu hình"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid ""
+"Configure which Odoo stock locations map to which Haravan locations.\n"
+"                                Set <strong>Upload on Delivery = ✓</strong> to auto-push stock when a delivery is validated.\n"
+"                                Set <strong>Location Code</strong> to the code used by the Proxy Inventory API."
+msgstr ""
+"Cấu hình vị trí kho Odoo liên kết với vị trí Haravan.\n"
+"                                Đặt <strong>Đẩy khi Giao hàng = ✓</strong> để tự động đẩy tồn kho khi giao hàng được xác nhận.\n"
+"                                Đặt <strong>Mã Vị trí</strong> theo mã được sử dụng bởi API Quản lý Tồn kho."
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__state__connected
+msgid "Connected"
+msgstr "Đã kết nối"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Connected to shop: %s"
+msgstr "Đã kết nối với cửa hàng: %s"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__state__error
+msgid "Connection Error"
+msgstr "Lỗi Kết nối"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Connection Successful"
+msgstr "Kết nối Thành công"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Connection test failed: %s"
+msgstr "Kiểm tra kết nối thất bại: %s"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_location.py:0
+msgid "Could not fetch locations from Haravan: %s"
+msgstr "Không thể lấy địa điểm từ Haravan: %s"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_country_code
+msgid "Country Code"
+msgstr "Mã Quốc gia"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Create Invoice"
+msgstr "Tạo Hóa đơn"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__create_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__create_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__currency
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__customers/create
+msgid "Customer Created"
+msgstr "Khách hàng Mới"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Customer Settings"
+msgstr "Cài đặt Khách hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__customers/update
+msgid "Customer Updated"
+msgstr "Khách hàng Được cập nhật"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_customers
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__sync_interval__1440
+msgid "Daily"
+msgstr "Hàng ngày"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__create_date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__default_customer_country_id
+msgid "Default Customer Country"
+msgstr "Quốc gia Khách hàng Mặc định"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__default_pricelist_id
+msgid "Default Pricelist"
+msgstr "Bảng giá Mặc định"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__default_product_category_id
+msgid "Default Product Category"
+msgstr "Danh mục Sản phẩm Mặc định"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__default_warehouse_id
+msgid "Default Warehouse"
+msgstr "Kho Mặc định"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__details
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__inventorylocationbalances/create
+msgid "Details Inventory"
+msgstr "Chi tiết Tồn kho"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_list
+msgid "Diff"
+msgstr "Chênh lệch"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__qty_difference
+msgid "Difference"
+msgstr "Khác biệt"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_search
+msgid "Direction"
+msgstr "Hướng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__total_discounts
+msgid "Discounts"
+msgstr "Giảm giá"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_product_template__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_res_partner__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_location__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_quant__display_name
+msgid "Display Name"
+msgstr "Tên Hiển thị"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_inventory__sync_state__diverged
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_product_variant__price_sync_state__diverged
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_search
+msgid "Diverged"
+msgstr "Lệch nhau"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_email
+msgid "Email"
+msgstr "Email"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_customer__sync_state__error
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_log__level__error
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_order__sync_state__error
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_product__sync_state__error
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__state__error
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_search
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_search
+msgid "Errors"
+msgstr "Các lỗi"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__topic
+msgid "Event Topic"
+msgstr "Chủ đề Sự kiện"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__sync_interval__15
+msgid "Every 15 minutes"
+msgstr "Mỗi 15 phút"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__sync_interval__30
+msgid "Every 30 minutes"
+msgstr "Mỗi 30 phút"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__sync_interval__360
+msgid "Every 6 hours"
+msgstr "Mỗi 6 giờ"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__sync_interval__60
+msgid "Every hour"
+msgstr "Mỗi giờ"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_webhook.py:0
+msgid "Failed to register webhook %s: %s"
+msgstr "Không đăng ký webhook %s: %s"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__haravan_financial_status
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__financial_status
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_search
+msgid "Financial Status"
+msgstr "Trạng thái Tài chính"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_first_name
+msgid "First Name"
+msgstr "Tên"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_location_mapping__stock_upload_type__virtual_available
+msgid "Forecasted (virtual_available)"
+msgstr "Dự báo (virtual_available)"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__format
+msgid "Format"
+msgstr "Định dạng"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__stock_upload_type__free_qty
+msgid "Free to Use Quantity"
+msgstr "Số lượng Sẵn sàng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_search
+msgid "Fulfilled"
+msgstr "Đã hoàn tất"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__haravan_fulfillment_status
+msgid "Fulfillment Status"
+msgstr "Trạng thái Hoàn tất"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Grand Total"
+msgstr "Tổng cộng"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_root
+#: model:res.groups.privilege,name:haravan_connector.res_groups_privilege_haravan
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Haravan"
+msgstr "Haravan"
+
+#. module: haravan_connector
+#: model:res.groups,name:haravan_connector.group_haravan_manager
+msgid "Haravan / Manager"
+msgstr "Haravan / Quản lý"
+
+#. module: haravan_connector
+#: model:res.groups,name:haravan_connector.group_haravan_user
+msgid "Haravan / User"
+msgstr "Haravan / Người dùng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Haravan Configuration"
+msgstr "Cấu hình Haravan"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_config
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_list
+msgid "Haravan Configurations"
+msgstr "Các Cấu hình Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_form
+msgid "Haravan Customer"
+msgstr "Khách hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_customer_id
+#: model:ir.model.fields,field_description:haravan_connector.field_res_partner__haravan_customer_id
+#: model:ir.model.fields,field_description:haravan_connector.field_res_users__haravan_customer_id
+msgid "Haravan Customer ID"
+msgstr "ID Khách hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_customer
+msgid "Haravan Customer Mapping"
+msgstr "Khách hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_customer
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_list
+msgid "Haravan Customers"
+msgstr "Khách hàng Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_form
+msgid "Haravan Info"
+msgstr "Thông tin Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_inventory
+msgid "Haravan Inventory Sync Record"
+msgstr "Bản ghi Đồng bộ Tồn kho Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_location__haravan_location_ids
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Haravan Location"
+msgstr "Kho Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_location_id
+msgid "Haravan Location ID"
+msgstr "ID Kho Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Haravan Location Mapping"
+msgstr "Liên kết kho Haravan"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_location_mapping
+msgid "Haravan Location Mappings"
+msgstr "Liên kết kho Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_location_name
+msgid "Haravan Location Name"
+msgstr "Tên Kho Haravan"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_location.py:0
+msgid "Haravan Locations"
+msgstr "Các Kho Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_sync_wizard
+msgid "Haravan Manual Sync Wizard"
+msgstr "Trợ lý Đồng bộ Thủ công Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_note
+msgid "Haravan Note"
+msgstr "Ghi chú Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_form
+msgid "Haravan Order"
+msgstr "Đơn hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__haravan_order_number
+msgid "Haravan Order #"
+msgstr "Số Đơn hàng Haravan #"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_orders_count
+msgid "Haravan Order Count"
+msgstr "Số lượng Đơn hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__haravan_order_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__haravan_order_id
+msgid "Haravan Order ID"
+msgstr "ID Đơn hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_order
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_form
+msgid "Haravan Order Mapping"
+msgstr "Đơn hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_order
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_list
+msgid "Haravan Orders"
+msgstr "Đơn hàng Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Haravan Price"
+msgstr "Giá Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__haravan_product_id
+msgid "Haravan Product"
+msgstr "Sản phẩm Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__haravan_product_id
+#: model:ir.model.fields,field_description:haravan_connector.field_product_product__haravan_product_id
+#: model:ir.model.fields,field_description:haravan_connector.field_product_template__haravan_product_id
+msgid "Haravan Product ID"
+msgstr "ID Sản phẩm Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_product
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Haravan Product Mapping"
+msgstr "Sản phẩm Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_product_variant
+msgid "Haravan Product Variant Mapping"
+msgstr "Biến thể Sản phẩm Haravan"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_product
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_list
+msgid "Haravan Products"
+msgstr "Sản phẩm Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_list
+msgid "Haravan Qty"
+msgstr "Số lượng Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Haravan Revenue"
+msgstr "Doanh thu Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_revenue
+msgid "Haravan Revenue Record"
+msgstr "Bản ghi Doanh thu Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_config
+msgid "Haravan Store Configuration"
+msgstr "Cấu hình Cửa hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_log
+msgid "Haravan Sync Log"
+msgstr "Nhật ký Đồng bộ Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_list
+msgid "Haravan Sync Logs"
+msgstr "Nhật ký Đồng bộ Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_tags
+msgid "Haravan Tags"
+msgstr "Thẻ Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__haravan_title
+msgid "Haravan Title"
+msgstr "Tiêu đề Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__haravan_updated_at
+msgid "Haravan Updated At"
+msgstr "Cập nhật Haravan lúc"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__haravan_variant_id
+msgid "Haravan Variant ID"
+msgstr "ID Biến thể Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_webhook_form
+msgid "Haravan Webhook"
+msgstr "Webhook Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__haravan_webhook_id
+msgid "Haravan Webhook ID"
+msgstr "ID Webhook Haravan"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_webhook
+msgid "Haravan Webhook Subscription"
+msgstr "Đăng ký Webhook Haravan"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_webhook
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_webhook_list
+msgid "Haravan Webhooks"
+msgstr "Webhooks Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_inventory__sync_direction__haravan_to_odoo
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_location_mapping__sync_direction__haravan_to_odoo
+msgid "Haravan → Odoo"
+msgstr "Haravan → Odoo"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_haravan_location_mapping
+msgid "Haravan ↔ Odoo Location Mapping"
+msgstr "Liên kết Kho Haravan ↔ Odoo"
+
+#. module: haravan_connector
+#: model:ir.actions.server,name:haravan_connector.ir_cron_haravan_sync_all_ir_actions_server
+msgid "Haravan: Sync All Active Stores"
+msgstr "Haravan: Đồng bộ Tất cả Cửa hàng Hoạt động"
+
+#. module: haravan_connector
+#: model:ir.actions.server,name:haravan_connector.ir_cron_haravan_customer_sync_ir_actions_server
+msgid "Haravan: Sync Customers Daily"
+msgstr "Haravan: Đồng bộ Khách hàng Hàng ngày"
+
+#. module: haravan_connector
+#: model:ir.actions.server,name:haravan_connector.ir_cron_haravan_product_sync_ir_actions_server
+msgid "Haravan: Sync Products Daily"
+msgstr "Haravan: Đồng bộ Sản phẩm Hàng ngày"
+
+#. module: haravan_connector
+#: model:ir.actions.server,name:haravan_connector.ir_cron_haravan_revenue_sync_ir_actions_server
+msgid "Haravan: Sync Revenue Daily"
+msgstr "Haravan: Đồng bộ Doanh thu Hàng ngày"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__id
+#: model:ir.model.fields,field_description:haravan_connector.field_product_template__id
+#: model:ir.model.fields,field_description:haravan_connector.field_res_partner__id
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_location__id
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_picking__id
+#: model:ir.model.fields,field_description:haravan_connector.field_stock_quant__id
+msgid "ID"
+msgstr "ID"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__import_order_status
+msgid "Import Orders With Status"
+msgstr "Nhập Đơn hàng Với Trạng thái"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_inventory__sync_state__synced
+msgid "In Sync"
+msgstr "Đang Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_location_mapping__sync_inventory
+msgid "Include this location in inventory push/pull operations"
+msgstr "Bao gồm địa điểm này trong hoạt động đẩy/kéo tồn kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_log__level__info
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_search
+msgid "Info"
+msgstr "Thông tin"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_location_mapping__odoo_location_id
+msgid ""
+"Internal or transit stock location in Odoo that corresponds to this Haravan "
+"location"
+msgstr ""
+"Địa điểm kho nội bộ hoặc quá cảnh trong Odoo tương ứng với địa điểm Haravan này"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_revenue_inventory.py:0
+msgid "Invalid or missing Haravan inventory item ID."
+msgstr "ID mục tồn kho Haravan không hợp lệ hoặc bị thiếu."
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__haravan_inventory_item_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__haravan_inventory_item_id
+msgid "Inventory Item ID"
+msgstr "ID Mục Tồn kho"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm tồn Kho"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_inventory
+msgid "Inventory Mappings"
+msgstr "Liên kết Tồn kho"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_inventory
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_inventory_main
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_list
+msgid "Inventory Sync"
+msgstr "Đồng bộ Tồn kho"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_form
+msgid "Inventory Sync Record"
+msgstr "Bản ghi Đồng bộ Tồn kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__inventorytransaction/create
+msgid "Inventory Transaction Create"
+msgstr "Tạo Giao dịch Tồn kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__odoo_invoice_id
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__is_transfer_sale
+msgid "Is Transfer Sale"
+msgstr "Là Bán chuyển"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__is_unavailable_quantity
+msgid "Is Unavailable Quantity"
+msgstr "Là Số lượng Không sẵn có"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__format__json
+msgid "JSON"
+msgstr "JSON"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Kết nối cửa hàng thành công!"
+msgstr "Kết nối cửa hàng thành công!"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__error_message
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__error_message
+msgid "Last Error"
+msgstr "Lỗi Cuối cùng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_last_name
+msgid "Last Name"
+msgstr "Họ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__last_sync_date
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_price_list
+msgid "Last Sync"
+msgstr "Đồng bộ Cuối cùng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__last_synced
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__last_synced
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__last_synced
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__last_synced
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__last_synced
+msgid "Last Synced"
+msgstr "Đồng bộ Lần cuối"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__last_triggered
+msgid "Last Triggered"
+msgstr "Kích hoạt Lần cuối"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__write_uid
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật Lần cuối bởi"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__write_date
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật Lần cuối lúc"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__level
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_search
+msgid "Level"
+msgstr "Mức độ"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__locations/create
+msgid "Location Created"
+msgstr "Kho Được tạo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__location_id
+msgid "Location ID"
+msgstr "Mã kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__location_ids
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_location
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Location Mappings"
+msgstr "Liên kết địa điểm"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__locations/update
+msgid "Location Updated"
+msgstr "Kho Được cập nhật"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Lỗi xác thực: %s"
+msgstr "Lỗi xác thực: %s"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_sync_wizard_form
+msgid "Manual Sync"
+msgstr "Đồng bộ Thủ công"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_log__message
+msgid "Message"
+msgstr "Thông báo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__revenue_month
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_search
+msgid "Month"
+msgstr "Tháng"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_customer.py:0
+msgid "No CRM contact linked."
+msgstr "Chưa liên kết liên hệ CRM."
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_search
+msgid "No Invoice"
+msgstr "Không có Hóa đơn"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_product.py:0
+msgid "No Odoo product linked."
+msgstr "Chưa liên kết Sản phẩm Odoo."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "No access token. Please authenticate first."
+msgstr "Chưa có token truy cập. Vui lòng xác thực trước tiên."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_order.py:0
+msgid "No completed deliveries to fulfill."
+msgstr "Không có giao hàng hoàn tất để hoàn tất."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_revenue_inventory.py:0
+msgid "No linked sale order to invoice."
+msgstr "Không có đơn bán hàng liên kết để lập hóa đơn."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_order.py:0
+msgid "No mapped products found in completed deliveries."
+msgstr "Không tìm thấy sản phẩm liên kết trong giao hàng hoàn tất."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "No refresh token available. Re-authenticate."
+msgstr "Không có token làm mới. Hãy xác thực lại."
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_order.py:0
+msgid "No sale order linked."
+msgstr "Chưa liên kết đơn bán hàng."
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__state__draft
+msgid "Not Connected"
+msgstr "Chưa Kết nối"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_search
+msgid "Not Mapped"
+msgstr "Chưa Liên kết"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__notes
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "Nothing selected."
+msgstr "Chưa chọn gì."
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_location_mapping__haravan_location_id
+msgid "Numeric ID from Haravan /locations.json"
+msgstr "ID số từ Haravan /locations.json"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "OAuth 2.0"
+msgstr "OAuth 2.0"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__odoo_partner_id
+msgid "Odoo Contact"
+msgstr "Liên hệ Odoo"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_form
+msgid "Odoo Links"
+msgstr "Liên kết Odoo"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Odoo Mapping"
+msgstr "Liên kết Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__odoo_product_id
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__odoo_product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_price_list
+msgid "Odoo Product"
+msgstr "Sản phẩm Odoo"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_list
+msgid "Odoo Qty"
+msgstr "Số lượng Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__odoo_sale_order_id
+msgid "Odoo Sale Order"
+msgstr "Đơn Bán hàng Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__odoo_location_id
+msgid "Odoo Stock Location"
+msgstr "Địa điểm Kho Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__odoo_product_id
+msgid "Odoo Variant"
+msgstr "Biến thể Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__odoo_warehouse_id
+msgid "Odoo Warehouse"
+msgstr "Kho Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_inventory__sync_direction__odoo_to_haravan
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_location_mapping__sync_direction__odoo_to_haravan
+msgid "Odoo → Haravan"
+msgstr "Odoo → Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_location_mapping__stock_upload_type__qty_available
+msgid "On-Hand (qty_available)"
+msgstr "Trên tay (qty_available)"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_form
+msgid "Open CRM Contact"
+msgstr "Mở Liên hệ CRM"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__import_order_status__open
+msgid "Open Only"
+msgstr "Chỉ Mở"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Optional notes…"
+msgstr "Ghi chú tùy chọn…"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__haravan_order_number
+msgid "Order #"
+msgstr "Đơn hàng #"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__orders/cancelled
+msgid "Order Cancelled"
+msgstr "Đơn hàng Bị hủy"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__orders/create
+msgid "Order Created"
+msgstr "Đơn hàng Được tạo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__order_date
+msgid "Order Date"
+msgstr "Ngày Đơn hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__orders/fulfilled
+msgid "Order Fulfilled"
+msgstr "Đơn hàng Được hoàn tát"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__orders/paid
+msgid "Order Paid"
+msgstr "Đơn hàng Đã thanh toán"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__order_prefix
+msgid "Order Prefix"
+msgstr "Tiền tố Đơn hàng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Order Settings"
+msgstr "Cài đặt Đơn hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__orders/updated
+msgid "Order Updated"
+msgstr "Đơn hàng Được cập nhật"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_orders
+msgid "Orders"
+msgstr "Đơn hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__total_orders_synced
+msgid "Orders Synced"
+msgstr "Đơn hàng Đã đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_product_variant__haravan_compare_at_price
+msgid "Original / crossed-out price shown on Haravan product page"
+msgstr "Giá gốc / giá gạch chéo hiển thị trên trang sản phẩm Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_search
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_customer__sync_state__pending
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_inventory__sync_state__pending
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_order__sync_state__pending
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_product__sync_state__pending
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_product_variant__price_sync_state__pending
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__state__pending
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_search
+msgid "Pending"
+msgstr "Chưa xử lý"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__order_prefix
+msgid "Prefix added to Haravan order names in Odoo"
+msgstr "Tiền tố thêm vào tên đơn hàng Haravan trong Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__price_last_pushed
+msgid "Price Last Pushed"
+msgstr "Giá Được đẩy Lần cuối"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_product.py:0
+msgid "Price Pushed"
+msgstr "Giá Được đẩy"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__price_sync_state
+msgid "Price State"
+msgstr "Trạng thái Giá"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_price_list
+msgid "Price Sync Status"
+msgstr "Trạng thái Đồng bộ Giá"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_product.py:0
+msgid "Price for \\\"%s\\\" pushed to Haravan."
+msgstr "Giá cho \\\"%s\\\" được đẩy lên Haravan."
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__haravan_price
+msgid "Price on Haravan"
+msgstr "Giá trên Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__private_access_token
+msgid "Private Access Token"
+msgstr "Token Truy cập Riêng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_price_list
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__products/create
+msgid "Product Created"
+msgstr "Sản phẩm Được tạo"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__products/delete
+msgid "Product Deleted"
+msgstr "Sản phẩm Bị xóa"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Product Settings"
+msgstr "Cài đặt Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__haravan_product_title
+msgid "Product Title"
+msgstr "Tên Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__products/update
+msgid "Product Updated"
+msgstr "Sản phẩm Được cập nhật"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_products
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__total_products_synced
+msgid "Products Synced"
+msgstr "Sản phẩm Đã đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__haravan_province
+msgid "Province"
+msgstr "Tỉnh"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__proxy_api_password
+msgid "Proxy Api Password"
+msgstr "Mật khẩu API Proxy"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__proxy_api_user
+msgid "Proxy Api User"
+msgstr "Người dùng API Proxy"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_form
+msgid "Purchase History"
+msgstr "Lịch sử Mua hàng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_list
+msgid "Push"
+msgstr "Đẩy"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_list
+msgid "Push All"
+msgstr "Đẩy Tất cả"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Push All to Haravan"
+msgstr "Đẩy Tất cả lên Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_list
+msgid "Push Fulfillment"
+msgstr "Đẩy Hoàn tất"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_form
+msgid "Push Fulfillment to Haravan"
+msgstr "Đẩy Hoàn tất lên Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__sync_inventory
+msgid "Push Inventory to Haravan"
+msgstr "Đẩy Tồn kho lên Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_list
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_price_list
+msgid "Push Price"
+msgstr "Đẩy Giá"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Push Prices"
+msgstr "Đẩy Giá"
+
+#. module: haravan_connector
+#: model:ir.actions.server,name:haravan_connector.action_haravan_product_push_price_mass
+msgid "Push Prices to Haravan"
+msgstr "Đẩy Giá lên Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_list
+msgid "Push only prices for all variants of this product"
+msgstr "Chỉ đẩy giá cho tất cả biến thể của sản phẩm này"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_list
+msgid "Push title, description and all variant prices"
+msgstr "Đẩy tên, mô tả và giá của tất cả biến thể"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_inventory_form
+msgid "Push to Haravan"
+msgstr "Đẩy lên Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__stock_upload_type
+msgid "Qty Type to Upload"
+msgstr "Loại Số lượng Để đẩy"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__qty_odoo
+msgid "Qty in Odoo"
+msgstr "Số lượng trong Odoo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__qty_haravan
+msgid "Qty on Haravan"
+msgstr "Số lượng trên Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_config__stock_upload_type__qty_available
+msgid "Quantity On Hand"
+msgstr "Số lượng Trên tay"
+
+#. module: haravan_connector
+#: model:ir.model,name:haravan_connector.model_stock_quant
+msgid "Quants"
+msgstr "Lượng tử"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__redirect_uri
+msgid "Redirect Url"
+msgstr "URL Chuyển hướng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__refresh_token
+msgid "Refresh Token"
+msgstr "Token Làm mới"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__refunds/create
+msgid "Refund Created"
+msgstr "Hoàn tiền Được tạo"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_webhook_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_webhook_list
+msgid "Register"
+msgstr "Đăng ký"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_webhook_list
+msgid "Remove"
+msgstr "Xóa"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_reporting
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__result_message
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_sync_wizard_form
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_form
+msgid "Revenue Breakdown"
+msgstr "Chia tách Doanh thu"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_form
+msgid "Revenue Record"
+msgstr "Bản ghi Doanh thu"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_revenue
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_revenue
+msgid "Revenue Reports"
+msgstr "Báo cáo Doanh thu"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_sync_wizard_form
+msgid "Run Sync"
+msgstr "Chạy Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__haravan_sku
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product_variant__haravan_sku
+msgid "SKU"
+msgstr "SKU"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_order.py:0
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__odoo_sale_order_id
+msgid "Sale Order"
+msgstr "Đơn Bán hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__webhook_secret
+msgid "Secret key used to verify Haravan webhook signatures (HMAC-SHA256)"
+msgstr "Khóa bí mật dùng để xác minh chữ ký webhook Haravan (HMAC-SHA256)"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_sync_wizard_form
+msgid "Select Sync Operations"
+msgstr "Chọn Hoạt động Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_product_product__haravan_product_id
+#: model:ir.model.fields,help:haravan_connector.field_product_template__haravan_product_id
+msgid "Set automatically when this product is synced from Haravan"
+msgstr "Đặt tự động khi sản phẩm này được đồng bộ từ Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__total_shipping
+msgid "Shipping"
+msgstr "Vận chuyển"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__shop_domain
+msgid "Shop Domain"
+msgstr "Tên miền Cửa hàng"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Shop domain must not contain spaces."
+msgstr "Tên miền cửa hàng không được chứa khoảng trắng."
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Stats"
+msgstr "Thống kê"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__state
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__odoo_location_id
+msgid "Stock Location"
+msgstr "Địa điểm tồn Kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__stock_upload_type
+msgid "Stock Upload Type"
+msgstr "Loại Tải lên Kho"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_config
+msgid "Store Configurations"
+msgstr "Cấu hình Cửa hàng"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Store Identity"
+msgstr "Danh tính Cửa hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__subtotal_price
+msgid "Subtotal"
+msgstr "Tổng phụ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__sync_customers
+msgid "Sync Customers"
+msgstr "Đồng bộ Khách hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__sync_direction
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__sync_direction
+msgid "Sync Direction"
+msgstr "Hướng Đồng bộ"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_search
+msgid "Sync Enabled"
+msgstr "Đồng bộ Bật"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__sync_interval
+msgid "Sync Interval"
+msgstr "Khoảng Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_location_mapping__sync_inventory
+msgid "Sync Inventory"
+msgstr "Đồng bộ Tồn kho"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_form
+msgid "Sync Log Entry"
+msgstr "Mục nhập Nhật ký Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.actions.act_window,name:haravan_connector.action_haravan_log
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__log_ids
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_logs
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Sync Logs"
+msgstr "Nhật ký Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__sync_orders
+msgid "Sync Orders"
+msgstr "Đồng bộ Đơn hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__sync_product_images
+msgid "Sync Product Images"
+msgstr "Đồng bộ Hình ảnh Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__sync_products
+msgid "Sync Products"
+msgstr "Đồng bộ Sản phẩm"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_sync_wizard__sync_revenue
+msgid "Sync Revenue"
+msgstr "Đồng bộ Doanh thu"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Sync Settings"
+msgstr "Cài đặt Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__sync_state
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__sync_state
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_order__sync_state
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__sync_state
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_search
+msgid "Sync State"
+msgstr "Trạng thái Đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_customer__sync_state__synced
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_order__sync_state__synced
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_product__sync_state__synced
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_product_variant__price_sync_state__synced
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_search
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_search
+msgid "Synced"
+msgstr "Đã đồng bộ"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__total_tax
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Test Connection"
+msgstr "Kiểm tra Kết nối"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_search
+msgid "This Month"
+msgstr "Tháng này"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_search
+msgid "Today"
+msgstr "Hôm nay"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__token_expiry
+msgid "Token Expiry"
+msgstr "Hết hạn Token"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Token Status"
+msgstr "Trạng thái Token"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "Token refresh failed: %s"
+msgstr "Làm mới token thất bại: %s"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Total Discounts"
+msgstr "Tổng Giảm giá"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__total_price
+msgid "Total Revenue"
+msgstr "Tổng Doanh thu"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Total Shipping"
+msgstr "Tổng Vận chuyển"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_customer__haravan_total_spent
+msgid "Total Spent (Haravan)"
+msgstr "Tổng Chi tiêu (Haravan)"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Total Subtotal"
+msgstr "Tổng Tổng phụ"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_list
+msgid "Total Tax"
+msgstr "Tổng Thuế"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_webhook__trigger_count
+msgid "Trigger Count"
+msgstr "Số lần Kích hoạt"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_location_mapping_form
+msgid "Try to match Haravan location name to an Odoo warehouse"
+msgstr "Cố gắng khớp tên địa điểm Haravan với kho Odoo"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_webhook_form
+msgid "Unregister"
+msgstr "Hủy đăng ký"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_webhook__topic__inventorylocationbalances/update
+msgid "Update Details Inventory"
+msgstr "Cập nhật Chi tiết Tồn kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__upload_stock
+msgid "Upload Stock"
+msgstr "Tải lên Kho"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__upload_stock
+msgid "Upload stock to Haravan"
+msgstr "Tải lên kho lên Haravan"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Used to verify HMAC-SHA256 signatures on incoming webhooks"
+msgstr "Dùng để xác minh chữ ký HMAC-SHA256 trên webhooks đến"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_inventory__haravan_variant_id
+msgid "Variant ID"
+msgstr "ID Biến thể"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_product__variant_ids
+msgid "Variants"
+msgstr "Biến thể"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_product_form
+msgid "Variants & Prices"
+msgstr "Biến thể & Giá"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_list
+msgid "View SO"
+msgstr "Xem Đơn Bán"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_order_form
+msgid "View Sale Order"
+msgstr "Xem Đơn Bán hàng"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_location_mapping__odoo_warehouse_id
+msgid "Warehouse derived from the selected stock location"
+msgstr "Kho được lấy từ địa điểm kho đã chọn"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__default_warehouse_id
+msgid "Warehouse used for Haravan orders"
+msgstr "Kho được sử dụng cho đơn hàng Haravan"
+
+#. module: haravan_connector
+#: model:ir.model.fields.selection,name:haravan_connector.selection__haravan_log__level__warning
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_log_search
+msgid "Warnings"
+msgstr "Các cảnh báo"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__webhook_count
+msgid "Webhook Count"
+msgstr "Số lượng Webhook"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__webhook_secret
+msgid "Webhook Secret"
+msgstr "Bí mật Webhook"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_config__webhook_ids
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_webhook
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "Webhooks registered: %d"
+msgstr "Webhooks đã đăng ký: %d"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_location_mapping__stock_upload_type
+msgid "Which stock quantity field to read when uploading to Haravan."
+msgstr "Trường số lượng kho nào được đọc khi tải lên Haravan."
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_customer_search
+msgid "With CRM Contact"
+msgstr "Với Liên hệ CRM"
+
+#. module: haravan_connector
+#: model:ir.model.fields,field_description:haravan_connector.field_haravan_revenue__revenue_year
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_revenue_search
+msgid "Year"
+msgstr "Năm"
+
+#. module: haravan_connector
+#: model:ir.model.fields,help:haravan_connector.field_haravan_config__shop_domain
+msgid "Your Haravan shop domain, e.g. mystore.myharavan.com"
+msgstr "Tên miền cửa hàng Haravan của bạn, ví dụ: mystore.myharavan.com"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/models/haravan_config.py:0
+msgid "config_id"
+msgstr "config_id"
+
+#. module: haravan_connector
+#: model:ir.ui.menu,name:haravan_connector.menu_haravan_ecommerce
+msgid "eCommerce Sync"
+msgstr "Đồng bộ Thương mại điện tử"
+
+#. module: haravan_connector
+#: model_terms:ir.ui.view,arch_db:haravan_connector.view_haravan_config_form
+msgid "mystore.myharavan.com"
+msgstr "mystore.myharavan.com"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "✓ Customers synced to CRM"
+msgstr "✓ Khách hàng đã đồng bộ vào CRM"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "✓ Inventory pushed to Haravan"
+msgstr "✓ Tồn kho đã được đẩy lên Haravan"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "✓ Orders synced"
+msgstr "✓ Đơn hàng đã được đồng bộ"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "✓ Products synced"
+msgstr "✓ Sản phẩm đã được đồng bộ"
+
+#. module: haravan_connector
+#. odoo-python
+#: code:addons/haravan_connector/wizard/haravan_sync_wizard.py:0
+msgid "✓ Revenue records synced: %d"
+msgstr "✓ Bản ghi Doanh thu đã được đồng bộ: %d"

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_haravan_root"
+              name="Haravan"
+              web_icon="haravan_connector,static/description/icon.png"
+              sequence="80"/>
+
+    <menuitem id="menu_haravan_config_main"
+              name="Configuration"
+              parent="menu_haravan_root"
+              sequence="100"/>
+
+    <menuitem id="menu_haravan_config"
+              name="Store Configurations"
+              parent="menu_haravan_config_main"
+              action="action_haravan_config"
+              sequence="10"/>
+
+    <menuitem id="menu_haravan_webhook"
+              name="Webhooks"
+              parent="menu_haravan_config_main"
+              action="action_haravan_webhook"
+              sequence="20"/>
+
+    <menuitem id="menu_haravan_ecommerce"
+              name="eCommerce Sync"
+              parent="menu_haravan_root"
+              sequence="20"/>
+
+    <menuitem id="menu_haravan_orders"
+              name="Orders"
+              parent="menu_haravan_ecommerce"
+              action="action_haravan_order"
+              sequence="10"/>
+
+    <menuitem id="menu_haravan_products"
+              name="Products"
+              parent="menu_haravan_ecommerce"
+              action="action_haravan_product"
+              sequence="20"/>
+
+    <menuitem id="menu_haravan_customers"
+              name="Customers"
+              parent="menu_haravan_ecommerce"
+              action="action_haravan_customer"
+              sequence="30"/>
+
+    <menuitem id="menu_haravan_revenue"
+              name="Revenue Reports"
+              parent="menu_haravan_ecommerce"
+              action="action_haravan_revenue"
+              sequence="40"/>
+
+    <menuitem id="menu_haravan_inventory_main"
+              name="Inventory Sync"
+              parent="menu_haravan_root"
+              sequence="30"/>
+
+    <menuitem id="menu_haravan_location"
+              name="Location Mappings"
+              parent="menu_haravan_inventory_main"
+              action="action_haravan_location_mapping"
+              sequence="20"/>
+
+    <menuitem id="menu_haravan_reporting"
+              name="Reporting"
+              parent="menu_haravan_root"
+              sequence="90"/>
+    
+    <menuitem id="menu_haravan_sale_report"
+              name="Sales Analysis"
+              action="action_haravan_sale_report_all"
+              parent="menu_haravan_reporting"
+              sequence="10"/>
+
+    <menuitem id="menu_haravan_logs"
+              name="Sync Logs"
+              parent="menu_haravan_reporting"
+              action="action_haravan_log"
+              sequence="10"/>
+
+</odoo>

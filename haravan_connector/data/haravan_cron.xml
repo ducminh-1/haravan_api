@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_cron_haravan_revenue_sync" model="ir.cron">
+            <field name="name">Haravan: Sync Revenue Daily</field>
+            <field name="model_id" ref="model_haravan_revenue" />
+            <field name="state">code</field>
+            <field name="code">model.sync_revenue()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root" />
+        </record>
+
+        <record id="ir_cron_haravan_customer_sync" model="ir.cron">
+            <field name="name">Haravan: Sync Customers Daily</field>
+            <field name="model_id" ref="model_haravan_customer" />
+            <field name="state">code</field>
+            <field name="code">model.sync_customers()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root" />
+        </record>
+
+        <record id="ir_cron_haravan_orders_sync" model="ir.cron">
+            <field name="name">Haravan: Sync Orders Daily</field>
+            <field name="model_id" ref="model_haravan_order" />
+            <field name="state">code</field>
+            <field name="code">model.sync_orders()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root" />
+        </record>
+
+        <record id="ir_cron_haravan_haravan_sync" model="ir.cron">
+            <field name="name">Haravan: Sync Products Daily</field>
+            <field name="model_id" ref="model_haravan_product" />
+            <field name="state">code</field>
+            <field name="code">model.sync_products()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root" />
+        </record>
+
+        <record id="upload_stock_haravan" model="ir.cron">
+             <field name="name">Haravan: Upload Stock Haravan</field>
+            <field name="model_id" ref="model_haravan_config" />
+            <field name="state">code</field>
+            <field name="code">model._upload_stock_to_haravan()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root" />
+        </record>
+
+        <record id="upload_price_haravan" model="ir.cron">
+            <field name="name">Haravan: Upload Price Haravan</field>
+            <field name="model_id" ref="model_haravan_config"/>
+            <field name="state">code</field>
+            <field name="code">model._upload_haravan_price()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root" />
+        </record>
+    </data>
+</odoo>

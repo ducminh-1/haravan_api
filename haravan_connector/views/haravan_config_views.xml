@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_haravan_config_form" model="ir.ui.view">
+        <field name="name">haravan.config.form</field>
+        <field name="model">haravan.config</field>
+        <field name="arch" type="xml">
+            <form string="Haravan Configuration">
+                <header> 
+                    <button name="action_test_connection" type="object"
+                            string="Connect" class="btn-primary"
+                            invisible="state == 'connected'"/>
+                    <button name="action_open_sync_wizard" type="object"
+                            string="Manual Sync" class="btn-secondary"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,connected"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_webhooks" type="object"
+                                class="oe_stat_button" icon="fa-bolt">
+                            <field name="webhook_count" widget="statinfo" string="Webhooks"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Configuration Name"/></h1>
+                    </div>
+
+                    <div class="alert alert-warning" invisible="state != 'error'" role="alert">
+                        <strong>Connection Error.</strong> Please re-authenticate or check your credentials.
+                    </div>
+                    <div class="alert alert-success" invisible="state != 'connected'" role="alert">
+                        <strong>Connected</strong> to Haravan store <field name="shop_domain" readonly="1" nolabel="1" class="d-inline"/>.
+                    </div>
+
+                    <group>
+                        <group string="Store Identity">
+                            <field name="shop_domain" placeholder="mystore.myharavan.com"/>
+                            <field name="active"/>
+                        </group>
+                        <group string="Stats" invisible="state != 'connected'">
+                            <field name="last_sync_date"/>
+                            <field name="total_orders_synced"/>
+                            <field name="total_products_synced"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+
+                        <page string="API Credentials" name="credentials">
+                            <group>
+                                <group string="OAuth 2.0">
+                                    <field name="client_id"/>
+                                    <field name="client_secret" password="True"/>
+                                    <field name="private_access_token" password="True"/>
+                                    <field name="redirect_uri"/>
+                                    <field name="proxy_api_user"/>
+                                    <field name="proxy_api_password"/>
+                                    <field name="webhook_secret" password="True"
+                                           help="Used to verify HMAC-SHA256 signatures on incoming webhooks"/>
+                                </group>
+                                <group string="Token Status">
+                                    <field name="access_token" password="True" readonly="1"/>
+                                    <field name="token_expiry" readonly="1"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Sync Settings" name="sync">
+                            <group>
+                                <group string="Auto Sync">
+                                    <field name="auto_sync_orders"/>
+                                    <field name="auto_sync_products"/>
+                                    <field name="auto_sync_inventory"/>
+                                    <field name="sync_interval"/>
+                                </group>
+                                <group string="Order Settings">
+                                    <field name="default_warehouse_id"/>
+                                    <field name="default_pricelist_id"/>
+                                    <field name="order_prefix"/>
+                                    <field name="auto_confirm_orders"/>
+                                    <field name="import_order_status"/>
+                                    <field name="upload_price_limit"/>    
+                                    <field name="upload_stock_limit"/> 
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Product Settings">
+                                    <field name="default_product_category_id"/>
+                                    <field name="sync_product_images"/>
+                                </group>
+                                <group string="Customer Settings">
+                                    <field name="default_customer_country_id"/>
+                                </group>
+                            </group>
+                        </page>
+                         <page string="Location Mappings" name="locations">
+                            <div class="alert alert-info" role="alert">
+                                Configure which Odoo stock locations map to which Haravan locations.
+                                Set <strong>Upload on Delivery = ✓</strong> to auto-push stock when a delivery is validated.
+                                Set <strong>Location Code</strong> to the code used by the Proxy Inventory API.
+                            </div>
+                            <field name="location_ids" nolabel="1">
+                                <list editable="bottom"
+                                         decoration-warning="not odoo_location_id"
+                                         decoration-muted="not haravan_active">
+                                    <field name="haravan_location_id" readonly="1"/>
+                                    <field name="haravan_location_name" readonly="1"/>
+                                    <field name="odoo_location_id"
+                                           domain="[('usage', 'in', ['internal','transit'])]"
+                                           options="{'no_create': True}"/>
+                                    <field name="odoo_warehouse_id" readonly="1" optional="show"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <page string="Webhooks" name="webhooks">
+                            <field name="webhook_ids" nolabel="1">
+                                <list editable="bottom">
+                                    <field name="topic"/>
+                                    <field name="callback_url" optional="show"/>
+                                    <field name="last_triggered" optional="show"/>
+                                    <field name="trigger_count" optional="show"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <page string="Sync Logs" name="logs">
+                            <field name="log_ids" nolabel="1">
+                                <list decoration-danger="level == 'error'"
+                                         decoration-warning="level == 'warning'">
+                                    <field name="create_date"/>
+                                    <field name="level" widget="badge"
+                                           decoration-success="level == 'info'"
+                                           decoration-warning="level == 'warning'"
+                                           decoration-danger="level == 'error'"/>
+                                    <field name="message"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_haravan_config_list" model="ir.ui.view">
+        <field name="name">haravan.config.list</field>
+        <field name="model">haravan.config</field>
+        <field name="arch" type="xml">
+            <list string="Haravan Configurations" decoration-muted="not active">
+                <field name="name"/>
+                <field name="shop_domain"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'connected'"
+                       decoration-danger="state == 'error'"
+                       decoration-muted="state == 'draft'"/>
+                <field name="last_sync_date"/>
+                <field name="total_orders_synced"/>
+                <field name="total_products_synced"/>
+                <field name="active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_haravan_config" model="ir.actions.act_window">
+        <field name="name">Haravan Configurations</field>
+        <field name="res_model">haravan.config</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

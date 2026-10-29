@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_haravan_customer_list" model="ir.ui.view">
+        <field name="name">haravan.customer.list</field>
+        <field name="model">haravan.customer</field>
+        <field name="arch" type="xml">
+            <list string="Haravan Customers"
+                     decoration-danger="sync_state == 'error'"
+                     decoration-success="sync_state == 'synced'">
+                <field name="config_id"/>
+                <field name="haravan_customer_id"/>
+                <field name="haravan_first_name"/>
+                <field name="haravan_last_name"/>
+                <field name="haravan_email"/>
+                <field name="haravan_phone"/>
+                <field name="haravan_orders_count"/>
+                <field name="haravan_total_spent" widget="monetary"
+                       options="{'currency_field': 'currency_field'}"/>
+                <field name="odoo_partner_id"/>
+                <field name="sync_state" widget="badge"
+                       decoration-success="sync_state == 'synced'"
+                       decoration-danger="sync_state == 'error'"/>
+                <field name="last_synced"/>
+                <button name="action_view_partner" type="object"
+                        string="CRM" class="btn-sm btn-secondary"
+                        invisible="not odoo_partner_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_haravan_customer_form" model="ir.ui.view">
+        <field name="name">haravan.customer.form</field>
+        <field name="model">haravan.customer</field>
+        <field name="arch" type="xml">
+            <form string="Haravan Customer">
+                <header>
+                    <button name="action_view_partner" type="object"
+                            string="Open CRM Contact" class="btn-secondary"
+                            invisible="not odoo_partner_id"/>
+                    <field name="sync_state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Haravan Info">
+                            <field name="config_id"/>
+                            <field name="haravan_customer_id"/>
+                            <field name="haravan_first_name"/>
+                            <field name="haravan_last_name"/>
+                            <field name="haravan_email"/>
+                            <field name="haravan_phone"/>
+                            <field name="haravan_tags"/>
+                        </group>
+                        <group string="Purchase History">
+                            <field name="haravan_orders_count"/>
+                            <field name="haravan_total_spent"/>
+                            <field name="odoo_partner_id"/>
+                            <field name="last_synced"/>
+                        </group>
+                    </group>
+                    <group string="Notes" invisible="not haravan_note">
+                        <field name="haravan_note" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_haravan_customer_search" model="ir.ui.view">
+        <field name="name">haravan.customer.search</field>
+        <field name="model">haravan.customer</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="haravan_email"/>
+                <field name="haravan_first_name"/>
+                <field name="haravan_last_name"/>
+                <field name="haravan_tags"/>
+                <filter string="Synced" name="synced" domain="[('sync_state','=','synced')]"/>
+                <filter string="With CRM Contact" name="with_partner"
+                        domain="[('odoo_partner_id','!=',False)]"/>
+                <group>
+                    <filter string="Configuration" name="group_config"
+                            context="{'group_by': 'config_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_haravan_customer" model="ir.actions.act_window">
+        <field name="name">Haravan Customers</field>
+        <field name="res_model">haravan.customer</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_haravan_customer_search"/>
+    </record>
+
+    <record id="view_haravan_revenue_list" model="ir.ui.view">
+        <field name="name">haravan.revenue.list</field>
+        <field name="model">haravan.revenue</field>
+        <field name="arch" type="xml">
+            <list string="Haravan Revenue" decoration-success="financial_status == 'paid'">
+                <field name="order_date"/>
+                <field name="config_id"/>
+                <field name="haravan_order_number"/>
+                <field name="financial_status" widget="badge"
+                       decoration-success="financial_status == 'paid'"
+                       decoration-warning="financial_status == 'pending'"
+                       decoration-danger="financial_status == 'refunded'"/>
+                <field name="subtotal_price" sum="Total Subtotal"/>
+                <field name="total_discounts" sum="Total Discounts"/>
+                <field name="total_shipping" sum="Total Shipping"/>
+                <field name="total_tax" sum="Total Tax"/>
+                <field name="total_price" sum="Grand Total"/>
+                <field name="currency"/>
+                <field name="odoo_sale_order_id"/>
+                <field name="odoo_invoice_id"/>
+                <button name="action_create_invoice" type="object"
+                        string="Create Invoice" class="btn-sm btn-primary"
+                        invisible="odoo_invoice_id or not odoo_sale_order_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_haravan_revenue_form" model="ir.ui.view">
+        <field name="name">haravan.revenue.form</field>
+        <field name="model">haravan.revenue</field>
+        <field name="arch" type="xml">
+            <form string="Revenue Record">
+                <header>
+                    <button name="action_create_invoice" type="object"
+                            string="Create Invoice" class="btn-primary"
+                            invisible="odoo_invoice_id or not odoo_sale_order_id"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Haravan Order">
+                            <field name="config_id"/>
+                            <field name="haravan_order_number"/>
+                            <field name="haravan_order_id"/>
+                            <field name="order_date"/>
+                            <field name="financial_status"/>
+                            <field name="currency"/>
+                        </group>
+                        <group string="Revenue Breakdown">
+                            <field name="subtotal_price"/>
+                            <field name="total_discounts"/>
+                            <field name="total_shipping"/>
+                            <field name="total_tax"/>
+                            <field name="total_price"/>
+                        </group>
+                    </group>
+                    <group string="Odoo Links">
+                        <field name="odoo_sale_order_id"/>
+                        <field name="odoo_invoice_id"/>
+                        <field name="revenue_month"/>
+                        <field name="revenue_year"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_haravan_revenue_search" model="ir.ui.view">
+        <field name="name">haravan.revenue.search</field>
+        <field name="model">haravan.revenue</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="haravan_order_number"/>
+                <field name="financial_status"/>
+                <field name="revenue_month"/>
+                <filter string="Paid" name="paid" domain="[('financial_status','=','paid')]"/>
+                <filter string="This Month" name="this_month"
+                        domain="[('revenue_month','=', (context_today()).strftime('%Y-%m'))]"/>
+                <filter string="No Invoice" name="no_invoice"
+                        domain="[('odoo_invoice_id','=',False)]"/>
+                <group>
+                    <filter string="Month" name="group_month"
+                            context="{'group_by': 'revenue_month'}"/>
+                    <filter string="Year" name="group_year"
+                            context="{'group_by': 'revenue_year'}"/>
+                    <filter string="Configuration" name="group_config"
+                            context="{'group_by': 'config_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_haravan_revenue" model="ir.actions.act_window">
+        <field name="name">Revenue Reports</field>
+        <field name="res_model">haravan.revenue</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_haravan_revenue_search"/>
+    </record>
+
+</odoo>

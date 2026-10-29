@@ -1,0 +1,16 @@
+/* Haravan Connector – Backend Styles */
+
+.o_haravan_state_connected {
+    color: #28a745;
+    font-weight: 600;
+}
+.o_haravan_state_error {
+    color: #dc3545;
+    font-weight: 600;
+}
+.o_haravan_badge_active {
+    background-color: #28a745;
+}
+.o_haravan_badge_error {
+    background-color: #dc3545;
+}

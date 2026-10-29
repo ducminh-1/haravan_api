@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_haravan_location_mapping_form" model="ir.ui.view">
+        <field name="name">haravan.location.mapping.form</field>
+        <field name="model">haravan.location.mapping</field>
+        <field name="arch" type="xml">
+            <form string="Haravan Location Mapping">
+                <header>
+                    <button name="action_auto_map" type="object"
+                            string="Auto Map" class="btn-secondary"
+                            invisible="odoo_location_id"
+                            help="Try to match Haravan location name to an Odoo warehouse"/>
+                </header>
+                <sheet>
+                    <div class="alert alert-warning" role="alert"
+                         invisible="odoo_location_id">
+                        <strong>Not mapped.</strong>
+                        Select an Odoo stock location to enable inventory sync for this Haravan location.
+                    </div>
+                    <group>
+                        <group string="Haravan Location">
+                            <field name="config_id"/>
+                            <field name="haravan_location_id"/>
+                            <field name="haravan_location_name"/>
+                            <field name="haravan_address"/>
+                            <field name="haravan_city"/>
+                            <field name="haravan_province"/>
+                            <field name="haravan_country_code"/>
+                            <field name="haravan_active" widget="boolean_toggle"/>
+                        </group>
+                        <group string="Odoo Mapping">
+                            <field name="odoo_location_id"
+                                   domain="[('usage', 'in', ['internal','transit'])]"
+                                   options="{'no_create': True}"/>
+                            <field name="odoo_warehouse_id" readonly="1"/>
+                            <field name="sync_inventory" widget="boolean_toggle"/>
+                            <field name="sync_direction"/>
+                            <field name="last_synced" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Notes" invisible="not notes">
+                        <field name="notes" nolabel="1" placeholder="Optional notes…"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_haravan_location_mapping_search" model="ir.ui.view">
+        <field name="name">haravan.location.mapping.search</field>
+        <field name="model">haravan.location.mapping</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="haravan_location_name"/>
+                <field name="config_id"/>
+                <field name="odoo_location_id"/>
+                <filter string="Not Mapped" name="not_mapped"
+                        domain="[('odoo_location_id','=',False)]"/>
+                <filter string="Sync Enabled" name="sync_on"
+                        domain="[('sync_inventory','=',True)]"/>
+                <filter string="Active on Haravan" name="active_haravan"
+                        domain="[('haravan_active','=',True)]"/>
+                <group>
+                    <filter string="Configuration" name="group_config"
+                            context="{'group_by': 'config_id'}"/>
+                    <filter string="Direction" name="group_direction"
+                            context="{'group_by': 'sync_direction'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_haravan_location_mapping" model="ir.actions.act_window">
+        <field name="name">Haravan Location Mappings</field>
+        <field name="res_model">haravan.location.mapping</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

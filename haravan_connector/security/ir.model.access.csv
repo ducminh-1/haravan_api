@@ -1,0 +1,20 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_haravan_config_manager,haravan.config manager,model_haravan_config,group_haravan_manager,1,1,1,1
+access_haravan_config_user,haravan.config user,model_haravan_config,group_haravan_user,1,0,0,0
+access_haravan_webhook_manager,haravan.webhook manager,model_haravan_webhook,group_haravan_manager,1,1,1,1
+access_haravan_webhook_user,haravan.webhook user,model_haravan_webhook,group_haravan_user,1,0,0,0
+access_haravan_product_manager,haravan.product manager,model_haravan_product,group_haravan_manager,1,1,1,1
+access_haravan_product_user,haravan.product user,model_haravan_product,group_haravan_user,1,0,0,0
+access_haravan_product_variant_manager,haravan.product.variant manager,model_haravan_product_variant,group_haravan_manager,1,1,1,1
+access_haravan_product_variant_user,haravan.product.variant user,model_haravan_product_variant,group_haravan_user,1,0,0,0
+access_haravan_order_manager,haravan.order manager,model_haravan_order,group_haravan_manager,1,1,1,1
+access_haravan_order_user,haravan.order user,model_haravan_order,group_haravan_user,1,1,0,0
+access_haravan_customer_manager,haravan.customer manager,model_haravan_customer,group_haravan_manager,1,1,1,1
+access_haravan_customer_user,haravan.customer user,model_haravan_customer,group_haravan_user,1,0,0,0
+access_haravan_revenue_manager,haravan.revenue manager,model_haravan_revenue,group_haravan_manager,1,1,1,1
+access_haravan_revenue_user,haravan.revenue user,model_haravan_revenue,group_haravan_user,1,0,0,0
+access_haravan_log_manager,haravan.log manager,model_haravan_log,group_haravan_manager,1,1,1,1
+access_haravan_log_user,haravan.log user,model_haravan_log,group_haravan_user,1,0,0,0
+access_haravan_sync_wizard_all,haravan.sync.wizard all,model_haravan_sync_wizard,group_haravan_user,1,1,1,1
+access_haravan_location_mapping_manager,haravan.location.mapping manager,model_haravan_location_mapping,group_haravan_manager,1,1,1,1
+access_haravan_location_mapping_user,haravan.location.mapping user,model_haravan_location_mapping,group_haravan_user,1,1,0,0

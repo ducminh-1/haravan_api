@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_haravan_log_list" model="ir.ui.view">
+        <field name="name">haravan.log.list</field>
+        <field name="model">haravan.log</field>
+        <field name="arch" type="xml">
+            <list string="Haravan Sync Logs"
+                     decoration-danger="level == 'error'"
+                     decoration-warning="level == 'warning'">
+                <field name="create_date"/>
+                <field name="config_id"/>
+                <field name="level" widget="badge"
+                       decoration-success="level == 'info'"
+                       decoration-warning="level == 'warning'"
+                       decoration-danger="level == 'error'"/>
+                <field name="message"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_haravan_log_form" model="ir.ui.view">
+        <field name="name">haravan.log.form</field>
+        <field name="model">haravan.log</field>
+        <field name="arch" type="xml">
+            <form string="Sync Log Entry">
+                <sheet>
+                    <group>
+                        <field name="create_date" readonly="1"/>
+                        <field name="config_id" readonly="1"/>
+                        <field name="level" readonly="1"/>
+                        <field name="message" readonly="1"/>
+                    </group>
+                    <field name="details" readonly="1" widget="code"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_haravan_log_search" model="ir.ui.view">
+        <field name="name">haravan.log.search</field>
+        <field name="model">haravan.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="message"/>
+                <field name="config_id"/>
+                <filter string="Errors" name="errors" domain="[('level','=','error')]"/>
+                <filter string="Warnings" name="warnings" domain="[('level','=','warning')]"/>
+                <filter string="Info" name="info" domain="[('level','=','info')]"/>
+                <filter string="Today" name="today"
+                        domain="[('create_date','>=', (context_today()).strftime('%Y-%m-%d 00:00:00'))]"/>
+                <group>
+                    <filter string="Level" name="group_level" context="{'group_by': 'level'}"/>
+                    <filter string="Configuration" name="group_config" context="{'group_by': 'config_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_haravan_log" model="ir.actions.act_window">
+        <field name="name">Sync Logs</field>
+        <field name="res_model">haravan.log</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_haravan_log_search"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_haravan_sync_wizard_form" model="ir.ui.view">
+        <field name="name">haravan.sync.wizard.form</field>
+        <field name="model">haravan.sync.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manual Sync">
+                <group string="Select Sync Operations">
+                    <field name="config_id"/>
+                    <field name="sync_orders"/>
+                    <field name="sync_products"/>
+                    <field name="sync_customers"/>
+                    <field name="sync_revenue"/>
+                </group>
+                <group string="Result" invisible="not result_message">
+                    <field name="result_message" nolabel="1" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="action_run_sync" type="object"
+                            string="Run Sync" class="btn-primary"/>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

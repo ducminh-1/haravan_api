@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_haravan_product_list" model="ir.ui.view">
+        <field name="name">haravan.product.list</field>
+        <field name="model">haravan.product</field>
+        <field name="arch" type="xml">
+            <list string="Haravan Products"
+                     decoration-danger="sync_state == 'error'"
+                     decoration-muted="sync_state == 'pending'">
+                <field name="config_id" optional="hide"/>
+                <field name="haravan_product_id" optional="hide"/>
+                <field name="haravan_title"/>
+                <field name="odoo_product_tmpl_id"/>
+                <field name="sync_state" widget="badge"
+                       decoration-success="sync_state == 'synced'"
+                       decoration-danger="sync_state == 'error'"
+                       decoration-warning="sync_state == 'pending'"/>
+                <field name="last_synced" optional="show"/>
+                <button name="action_push_product" type="object"
+                        string="Push All" class="btn-sm btn-secondary"
+                        help="Push title, description and all variant prices"/>
+                <button name="action_push_prices" type="object"
+                        string="Push Price" class="btn-sm btn-primary"
+                        help="Push only prices for all variants of this product"/>
+                <button name="action_push_inventory" type="object"
+                        string="Sync Stock" class="btn-sm btn-info"
+                        help="Push current Odoo stock levels to Haravan"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_haravan_product_form" model="ir.ui.view">
+        <field name="name">haravan.product.form</field>
+        <field name="model">haravan.product</field>
+        <field name="arch" type="xml">
+            <form string="Haravan Product Mapping">
+                <header>
+                    <button name="action_push_product" type="object"
+                            string="Push All to Haravan" class="btn-secondary"
+                            help="Push title, description and all variant prices"/>
+                    <button name="action_push_prices" type="object"
+                            string="Push Prices" class="btn-primary"
+                            help="Push only prices for all variants of this product"/>
+                    <button name="action_push_inventory" type="object"
+                            string="Sync Stock" class="btn-info"
+                            help="Push current Odoo stock levels to Haravan"/>
+                    <field name="sync_state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Haravan">
+                            <field name="config_id"/>
+                            <field name="haravan_product_id"/>
+                            <field name="haravan_title"/>
+                            <field name="haravan_updated_at"/>
+                        </group>
+                        <group string="Odoo">
+                            <field name="odoo_product_tmpl_id"/>
+                            <field name="last_synced"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Variants &amp; Prices" name="variants">
+                            <field name="variant_ids">
+                                <list editable="bottom"
+                                         decoration-warning="price_sync_state == 'diverged'"
+                                         decoration-muted="price_sync_state == 'pending'">
+                                    <field name="haravan_variant_id" readonly="1"/>
+                                    <field name="haravan_sku" readonly="1"/>
+                                    <field name="odoo_product_id"/>
+
+                                    <field name="odoo_product_id"
+                                           column_invisible="1"/>
+
+                                    <field name="haravan_price" string="Haravan Price" readonly="1"/>
+                                    <field name="haravan_grams" string="Weight (g)"/>
+
+                                    <field name="haravan_compare_at_price" string="Compare-At Price"/>
+                                    <field name="price_sync_state" widget="badge"
+                                           decoration-success="price_sync_state == 'synced'"
+                                           decoration-warning="price_sync_state == 'diverged'"
+                                           decoration-muted="price_sync_state == 'pending'"/>
+                                    <field name="price_last_pushed" readonly="1" optional="show"/>
+                                    <field name="haravan_inventory_item_id" optional="hide" readonly="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_haravan_product_price_list" model="ir.ui.view">
+        <field name="name">haravan.product.price.list</field>
+        <field name="model">haravan.product</field>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <list string="Price Sync Status"
+                     decoration-warning="sync_state == 'synced'"
+                     multi_edit="1">
+                <field name="haravan_title" string="Product"/>
+                <field name="config_id" optional="hide"/>
+                <field name="odoo_product_tmpl_id" string="Odoo Product"/>
+                <field name="sync_state" widget="badge"
+                       decoration-success="sync_state == 'synced'"/>
+                <field name="last_synced" string="Last Sync"/>
+                <button name="action_push_prices" type="object"
+                        string="Push Price" class="btn-sm btn-primary"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_haravan_product_search" model="ir.ui.view">
+        <field name="name">haravan.product.search</field>
+        <field name="model">haravan.product</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="haravan_title"/>
+                <field name="odoo_product_tmpl_id"/>
+                <field name="config_id"/>
+                <filter string="Synced" name="synced"
+                        domain="[('sync_state','=','synced')]"/>
+                <filter string="Pending" name="pending"
+                        domain="[('sync_state','=','pending')]"/>
+                <filter string="Error" name="error"
+                        domain="[('sync_state','=','error')]"/>
+                <group>
+                    <filter string="Configuration" name="group_config"
+                            context="{'group_by': 'config_id'}"/>
+                    <filter string="Sync State" name="group_state"
+                            context="{'group_by': 'sync_state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_haravan_product_push_price_mass" model="ir.actions.server">
+        <field name="name">Push Prices to Haravan</field>
+        <field name="model_id" ref="model_haravan_product"/>
+        <field name="binding_model_id" ref="model_haravan_product"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_push_prices()</field>
+    </record>
+
+    <record id="action_haravan_product_sync_stock_mass" model="ir.actions.server">
+        <field name="name">Sync Stock to Haravan</field>
+        <field name="model_id" ref="model_haravan_product"/>
+        <field name="binding_model_id" ref="model_haravan_product"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_push_inventory()</field>
+    </record>
+
+    <record id="action_haravan_product" model="ir.actions.act_window">
+        <field name="name">Haravan Products</field>
+        <field name="res_model">haravan.product</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_haravan_product_search"/>
+    </record>
+
+</odoo>
